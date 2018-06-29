@@ -1,0 +1,44 @@
+﻿@{
+  ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+  <h1>Simple TechDemo</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Some Static Text</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+  </div>
+  <div class="col-md-4">
+    <div style="width:300px;height:300px;">
+    <iframe src="https://www.assetmacro.com/highchart?id=3201&table=1" frameborder="0" scrolling="no" width="300px" height="280px"></iframe>
+    <div style="font-family: Arial, sans-serif;text-align: center;position: relative;font-size:10px;max-width:300px;">Powered by AssetMacro.com <a style="font-size:10px;color:#428bca;text-decoration:none;" href="https://www.assetmacro.com" target="_blank">Macroeconomic Indicators</a> - <a style="font-size:10px;color:#428bca;text-decoration:none;" href="https://www.assetmacro.com" target="_blank">Financial Data</a> - <a href="https://www.assetmacro.com/united-states/stock-market/sp-500-index/" target="_blank" title="S&P 500" style="font-size:10px;color:#428bca;text-decoration:none;">S&P 500</a></div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h2>Asset Price Feed</h2>
+    <p>
+      <table id="assetContainer" class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price [USD]</th>
+            <th>Last Change</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </p>
+  </div>
+</div>
+
+@section scripts
+{
+  <script src="@Url.Content("~/Scripts/assetpricefetcher.demo.js")"></script>
+  @*<script src="https://cointelegraph.com/news-widget" data-ct-widget-limit="6" data-ct-widget-theme="light" data-ct-widget-size="medium"></script>*@
+}

@@ -1,0 +1,37 @@
+﻿/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES  */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- DROP DATABASE IF EXISTS "Dev0xDo";
+-- CREATE DATABASE IF NOT EXISTS "Dev0xDo";
+-- USE "Dev0xDo";
+
+DROP TABLE IF EXISTS "PlanetDetails";
+CREATE TABLE IF NOT EXISTS "PlanetDetails" (
+	"Id" INT(10,0) NOT NULL,
+	"Name" NVARCHAR(max) NULL DEFAULT NULL,
+	"AstronomicalSymbol" NVARCHAR(max) NULL DEFAULT NULL,
+	"DistanceToSun" DECIMAL(18,2) NOT NULL COMMENT '',
+	"EquatorialRadius" DECIMAL(18,2) NOT NULL COMMENT '',
+	"EquatorialGravity" DECIMAL(18,2) NOT NULL COMMENT '',
+	"Comment" NVARCHAR(max) NULL DEFAULT NULL,
+	PRIMARY KEY ("Id")
+);
+
+DELETE FROM "PlanetDetails";
+/*!40000 ALTER TABLE "PlanetDetails" DISABLE KEYS */;
+INSERT INTO "PlanetDetails" ("Id", "Name", "AstronomicalSymbol", "DistanceToSun", "EquatorialRadius", "EquatorialGravity", "Comment") VALUES
+	(1, 'Mercury', '☿', 57909175, 2439.64, 3.7, 'He, Na+, P+ '),
+	(2, 'Venus', '♀', 108208930, 6051.59, 8.87, 'CO2, N2, SO2'),
+	(3, 'Earth', '⊕', 149597890, 6378.1, 9.81, 'N2, O2, Ar, CO2'),
+	(4, 'Mars', '♂', 227936640, 3397, 3.71, 'CO2, N2, Ar'),
+	(5, 'Jupiter', '♃', 778412010, 71492.68, 23.12, 'H2, He'),
+	(6, 'Saturn', '♄', 1426725400, 60267.14, 10.44, 'H2, He'),
+	(7, 'Uranus', '⛢', 2870972200, 25557.25, 8.69, 'H2, He, CH4'),
+	(8, 'Neptune', '♆', 4498252900, 24766.36, 11, 'H2, He, CH4');
+/*!40000 ALTER TABLE "PlanetDetails" ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
